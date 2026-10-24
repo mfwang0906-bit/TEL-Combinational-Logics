@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decoders &amp; Encoders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <p><a href="index.html">← Home</a></p>
+  <h1>Decoders &amp; Encoders</h1>
+
+  <section class="question">
+    <h2>Synthesis</h2>
+    <p id="synth-text"></p>
+    <button onclick="newSynthesis()">New question</button>
+    <button onclick="showSolution()">Show solution</button>
+    <div id="synth-solution" hidden></div>
+  </section>
+
+  <section class="question">
+    <h2>Analysis</h2>
+    <p>A 3-to-8 decoder with active-low outputs has Y0, Y3 and Y5 connected to a 3-input NAND gate, giving output f(a, b, c). Find f in the form Σm(...).</p>
+    <p><em>Circuit diagram to be added.</em></p>
+    <details><summary>Show answer</summary><p>f(a, b, c) = Σm(0, 3, 5)</p></details>
+  </section>
+
+  <script src="js/engine.js"></script>
+  <script src="js/decoder.js"></script>
+</body>
+</html>
