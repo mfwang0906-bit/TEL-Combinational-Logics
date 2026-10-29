@@ -10,11 +10,26 @@
   <p><a href="index.html">← Home</a></p>
   <h1>Decoders &amp; Encoders</h1>
 
-  <section class="question">
+   <section class="question">
     <h2>Synthesis</h2>
     <p id="synth-text"></p>
+    <div id="synth-table"></div>
+    <p>
+      Connect outputs Y: <input id="synth-outputs" placeholder="e.g. 1, 3, 5" size="12">
+      to a
+      <select id="synth-gate">
+        <option value="">choose gate</option>
+        <option>AND</option>
+        <option>OR</option>
+        <option>NAND</option>
+        <option>NOR</option>
+      </select>
+      gate.
+    </p>
     <button onclick="newSynthesis()">New question</button>
+    <button onclick="checkSynthesis()">Check answer</button>
     <button onclick="showSolution()">Show solution</button>
+    <p id="synth-feedback"></p>
     <div id="synth-solution" hidden></div>
   </section>
 

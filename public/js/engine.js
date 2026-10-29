@@ -30,3 +30,12 @@ function randomTerms(max, k) {
   }
   return pool.slice(0, k).sort((a, b) => a - b);
 }
+// Output of a logic gate for a list of 0/1 inputs.
+function gate(type, inputs) {
+  const and = inputs.every(x => x === 1) ? 1 : 0;
+  const or  = inputs.some(x => x === 1) ? 1 : 0;
+  if (type === "AND")  return and;
+  if (type === "NAND") return 1 - and;
+  if (type === "OR")   return or;
+  if (type === "NOR")  return 1 - or;
+}
