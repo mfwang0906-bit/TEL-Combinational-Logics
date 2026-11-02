@@ -39,3 +39,21 @@ function gate(type, inputs) {
   if (type === "OR")   return or;
   if (type === "NOR")  return 1 - or;
 }
+// 4-to-2 binary encoder built from OR gates: A1 = D3 + D2, A0 = D3 + D1.
+// inputs = [D3, D2, D1, D0]. Only gives a meaningful code when exactly one input is 1.
+function binaryEncoder(inputs) {
+  const [d3, d2, d1] = inputs;
+  return [d3 | d2, d3 | d1];
+}
+
+// 4-to-2 priority encoder. inputs = [D3, D2, D1, D0]; D3 has the highest priority.
+// Returns [A1, A0, V]. V = 0 when no input is active (A1, A0 then shown as 0).
+function priorityEncoder(inputs) {
+  for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i] === 1) {
+      const index = inputs.length - 1 - i;      // position 0 in the array is D3
+      return [(index >> 1) & 1, index & 1, 1];
+    }
+  }
+  return [0, 0, 0];
+}
