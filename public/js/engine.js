@@ -57,3 +57,14 @@ function priorityEncoder(inputs) {
   }
   return [0, 0, 0];
 }
+// Multiplexer: returns the data input chosen by the select bits.
+// mux([1, 0], [d0, d1, d2, d3]) -> d2
+function mux(selectBits, data) {
+  return data[parseInt(selectBits.join(""), 2)];
+}
+
+// Demultiplexer: routes data bit d to the output chosen by the select bits; all others are 0.
+// Built from the decoder: the decoder picks the output, and d is ANDed onto it.
+function demux(d, selectBits) {
+  return decoder(selectBits, false).map(o => o & d);
+}

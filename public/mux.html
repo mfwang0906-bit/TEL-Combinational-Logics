@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multiplexers &amp; Demultiplexers</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <p><a href="index.html">← Home</a></p>
+  <h1>Multiplexers &amp; Demultiplexers</h1>
+
+  <section class="question">
+    <h2>Multiplexer</h2>
+    <p id="mux-text"></p>
+    <div id="mux-table"></div>
+    <p>
+      I0 = <select id="mux-i0"></select>
+      I1 = <select id="mux-i1"></select>
+      I2 = <select id="mux-i2"></select>
+      I3 = <select id="mux-i3"></select>
+    </p>
+    <button onclick="newMux()">New question</button>
+    <button onclick="checkMux()">Check answer</button>
+    <button onclick="showMuxSolution()">Show solution</button>
+    <p id="mux-feedback"></p>
+    <div id="mux-solution" hidden></div>
+  </section>
+
+  <section class="question">
+    <h2>Demultiplexer</h2>
+    <p id="dmx-text"></p>
+    <p>
+      Y0 = <input id="dmx-y0" maxlength="1" size="1">
+      Y1 = <input id="dmx-y1" maxlength="1" size="1">
+      Y2 = <input id="dmx-y2" maxlength="1" size="1">
+      Y3 = <input id="dmx-y3" maxlength="1" size="1">
+    </p>
+    <button onclick="newDemux()">New question</button>
+    <button onclick="checkDemux()">Check answer</button>
+    <button onclick="showDemuxSolution()">Show solution</button>
+    <p id="dmx-feedback"></p>
+    <div id="dmx-solution" hidden></div>
+  </section>
+
+  <footer>NTU EEE Final Year Project, AY2026/27</footer>
+
+  <script src="js/engine.js"></script>
+  <script src="js/mux.js"></script>
+</body>
+</html>
